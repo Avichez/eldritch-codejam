@@ -1,0 +1,14 @@
+.main-container {
+    min-height: 55vh;
+    display: flex;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .table-element {
+        flex: 0 1 50%;
+    }
+}

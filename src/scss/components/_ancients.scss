@@ -1,0 +1,35 @@
+.ancients-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 60px;
+}
+
+.ancient-card {
+    position: relative;
+    border-radius: 1rem;
+    height: 350px;
+    width: 250px;
+    box-shadow: 0px 0px 25px #fffd699f;
+    transition: all 0.2s ease;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -14px;
+        left: -14px;
+        width: calc(100% - 18px);
+        height: calc(100% - 23px);
+        border-style: solid;
+        border-width: 27px 27px 31px;
+        border-image: url("../assets/homepage-frame-grid.png") 27 27 31 fill / 1 / 0 stretch;
+    }
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 25px #f5ff6963, 0px 0px 20px #e4cf81;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

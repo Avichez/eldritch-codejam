@@ -1,8 +1,24 @@
 // libs
 @import "./libs/normalize";
+@import "./libs/fonts";
 
 // abstracts
 @import "./abstract/mixins";
 
 //base
 @import "./base/base";
+@import "./base/wrapper";
+@import "./base/button";
+
+//componets
+@import "./components/ancients";
+@import "./components/main";
+@import "./components/difficults";
+@import "./components/stages";
+@import "./components/cardsboard";
+
+body {
+    background-image: url("../assets/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

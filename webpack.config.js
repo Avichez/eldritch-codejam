@@ -53,15 +53,15 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|webp|gif|svg)$/i,
-                type: "assets/resource",
+                type: "asset/resource",
             },
             {
                 test: /\.js$/,
-                exclude: /(node_moduels)/,
+                exclude: /(node_modules)/,
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@label/preset-env"],
+                        presets: ["@babel/preset-env"],
                     },
                 },
             },

@@ -1,0 +1,53 @@
+.cards-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.board-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 470px;
+    gap: 40px;
+    background-image: url("../assets/wooden-board.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: boardIn 1s ease-in-out;
+}
+
+.closed-cards {
+    width: 170px;
+    height: 250px;
+    // border: 2px solid white;
+    border-radius: 1rem;
+    box-shadow: 5px 3px 8px #202020;
+    background-image: url("../assets/mythicCardBackground.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.open-cards {
+    width: 170px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 1rem;
+}
+
+@keyframes boardIn {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
