@@ -1,5 +1,6 @@
 import "./index.html";
 import "./scss/style.scss";
+import "./data/tilt";
 import "./data/shuffleCards";
 
 window.addEventListener("load", () => {
