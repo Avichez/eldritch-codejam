@@ -8,9 +8,9 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         mainCotainer.style.opacity = "1";
         mainCotainer.style.pointerEvents = "all";
-    }, 2400);
+    }, 2900);
 
     setTimeout(() => {
         preloader.style.display = "none";
-    }, 2400);
+    }, 2900);
 });
