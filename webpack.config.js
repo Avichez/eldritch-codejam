@@ -56,6 +56,10 @@ module.exports = {
                 type: "asset/resource",
             },
             {
+                test: /\.(?:mp3|wav|ogg|mp4)$/i,
+                type: "asset/resource",
+            },
+            {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: {
