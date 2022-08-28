@@ -1,0 +1,44 @@
+.preloader {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-container {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    height: 300px;
+    width: 600px;
+    animation: showLogo 2.5s ease;
+}
+
+.logo-image {
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+}
+
+@keyframes showLogo {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
