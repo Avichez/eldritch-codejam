@@ -2,14 +2,14 @@
 .difficult-button {
     cursor: pointer;
     font-size: 2rem;
-    width: 200px;
+    width: 190px;
     margin: 13px;
     display: block;
     text-align: center;
     position: relative;
     letter-spacing: 1px;
     color: white;
-    padding: 15px 25px;
+    padding: 12px 20px;
     text-shadow: 0 0 4px #000, 0 0 8px #000;
     background: radial-gradient(circle, #edca37 25%, #a77d33 75%, #5f3f1d);
     transition: all 0.2s ease;
@@ -27,12 +27,22 @@
         border-width: 25px 25px 25px;
         border-image: url("../assets/homepage-frame-grid.png") 30 30 35 fill / 1 / 0 stretch;
     }
+    &.active {
+        transform: scale(1.05);
+        background: radial-gradient(circle, #fed83b 22%, #dba23e 83%, #9d6224);
+        box-shadow: 0px 0px 15px 5px #fed83b;
+    }
 }
 
 // shuffle button
 .shuffle-wrapper {
-    display: none;
     cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: calc(50% - 38px);
+    left: calc(50% - 100px);
+    z-index: 2;
     width: 200px;
     padding: 0 2px;
     border-right: none;
@@ -43,6 +53,11 @@
     background: linear-gradient(to bottom, #c1b3b0, #c1b3b0 9%, #4a3424 93%, #1c140d);
     border-top: 2px solid #ad9a90;
     border-bottom: 2px solid #1c140d;
+    transition: opacity 0.3s ease;
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
 }
 
 .shuffle-button {
