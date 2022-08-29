@@ -57,7 +57,6 @@ function randomGreenCards() {
 
     let difference;
     let resultArray = greenCards.sort(() => Math.round(Math.random() * 100) - 50);
-    console.log(resultArray);
 
     if (isDifficulty === "veryEasy") {
         difference = sum - easyFilter.length;
@@ -183,7 +182,6 @@ function getCards() {
         ...brown.slice(secondBrown, thirdBrown),
         ...blue.slice(secondBlue, thirdBlue),
     ].sort(() => Math.round(Math.random() * 100) - 50);
-    console.log(firstStage, secondStage, thirdStage);
 }
 
 // sort current cards quantity accroding to the Ancient and ramaining card in deck.

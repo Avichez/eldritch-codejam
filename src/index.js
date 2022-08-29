@@ -7,22 +7,30 @@ import mutedIcon from "./assets/icons/muted.png";
 import sound from "./sounds/dark_cthulhu_music.mp3";
 
 const muteButton = document.querySelector(".mute-button");
+const continueButton = document.querySelector(".button-continue");
+const mainContainer = document.querySelector(".container");
+const preloader = document.querySelector(".preloader");
 
 const audio = new Audio();
 let isPlay = false;
 
 window.addEventListener("load", () => {
-    const mainCotainer = document.querySelector(".container");
-    const preloader = document.querySelector(".preloader");
     setTimeout(() => {
-        mainCotainer.style.opacity = "1";
-        mainCotainer.style.pointerEvents = "all";
-        preloader.style.display = "none";
-    }, 2900);
-    setTimeout(() => {
-        playAudio();
-    }, 3000);
+        continueButton.style.opacity = "1";
+    }, 2500);
 });
+
+function enterToGame() {
+    playAudio();
+    mainContainer.style.opacity = "1";
+    mainContainer.style.pointerEvents = "all";
+    preloader.style.opacity = "0";
+    preloader.style.pointerEvents = "none";
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 400);
+}
+continueButton.addEventListener("click", enterToGame);
 
 function playAudio() {
     if (!isPlay) {

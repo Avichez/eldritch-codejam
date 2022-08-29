@@ -5,13 +5,16 @@
     left: 0;
     height: 100%;
     width: 100%;
+    transition: all 0.7s ease;
 }
 
 .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: calc(50% - 150px);
     left: calc(50% - 300px);
-    height: 300px;
     width: 600px;
     animation: showLogo 3s ease;
 }
@@ -21,6 +24,37 @@
     width: 600px;
     object-fit: cover;
 }
+
+.button-continue {
+    opacity: 0;
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 200px;
+    font-family: "Gwent", sans-serif;
+    font-size: 2.4rem;
+    color: #1c3a79;
+    transition: all 0.3s ease;
+    background-image: url("../assets/button-continue.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transition: none;
+        transform: scale(1);
+    }
+}
+
+// @keyframes showButton {
+//     0% {
+//         opacity: 0;
+//     }
+// }
 
 @keyframes showLogo {
     0% {
@@ -35,10 +69,7 @@
         opacity: 1;
         transform: scale(1);
     }
-    80% {
-        opacity: 1;
-    }
     100% {
-        opacity: 0;
+        opacity: 1;
     }
 }

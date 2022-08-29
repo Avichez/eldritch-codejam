@@ -9,7 +9,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     .table-element {
-        flex: 0 1 50%;
+        flex: 0 0 50%;
     }
 }
